@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Megha Nigwal — Product Manager</title>
+<style>
+  :root{
+    --ink:#16181d;
+    --sub:#5b616e;
+    --line:#e7e6e2;
+    --paper:#fbfaf7;
+    --card:#ffffff;
+    --accent:#b5462f;
+    --accent-soft:#f3e6e1;
+    --tag:#eef0ea;
+    --tag-ink:#3d4a3a;
+    --maxw:880px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Iowan Old Style','Palatino Linotype',Georgia,'Times New Roman',serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.6;
+  }
+  .sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;}
+  header.hero{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:76px 28px 40px;
+  }
+  .eyebrow{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    font-size:12px;
+    color:var(--accent);
+    font-weight:600;
+    margin-bottom:14px;
+  }
+  h1{
+    font-size:clamp(36px,6vw,58px);
+    margin:0 0 10px;
+    font-weight:400;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+  }
+  .role{
+    font-size:19px;
+    color:var(--sub);
+    margin:0 0 26px;
+  }
+  .intro{
+    font-size:17px;
+    color:#31353c;
+    max-width:640px;
+    margin:0 0 30px;
+  }
+  .contact-row{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    font-size:14px;
+  }
+  .contact-row a, .contact-row span{
+    padding:8px 14px;
+    border:1px solid var(--line);
+    border-radius:100px;
+    color:var(--ink);
+    text-decoration:none;
+    background:var(--card);
+    transition:border-color .15s, color .15s;
+  }
+  .contact-row a:hover{
+    border-color:var(--accent);
+    color:var(--accent);
+  }
+  nav.section-nav{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 28px 6px;
+    display:flex;
+    gap:22px;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+    font-size:13px;
+    color:var(--sub);
+    border-bottom:1px solid var(--line);
+    flex-wrap:wrap;
+  }
+  nav.section-nav a{
+    color:var(--sub);
+    text-decoration:none;
+    padding-bottom:16px;
+    border-bottom:2px solid transparent;
+  }
+  nav.section-nav a:hover{
+    color:var(--ink);
+    border-bottom-color:var(--accent);
+  }
+  main{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 28px;
+  }
+  section{
+    padding:52px 0;
+    border-bottom:1px solid var(--line);
+  }
+  section:last-of-type{border-bottom:none;}
+  h2{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    color:var(--accent);
+    font-weight:700;
+    margin:0 0 26px;
+  }
+  h3{
+    font-size:23px;
+    font-weight:600;
+    margin:0 0 4px;
+    color:var(--ink);
+  }
+  .meta{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+    font-size:13px;
+    color:var(--sub);
+    margin-bottom:16px;
+  }
+  .entry{margin-bottom:40px;}
+  .entry:last-child{margin-bottom:0;}
+  ul.bullets{
+    margin:0;
+    padding-left:20px;
+  }
+  ul.bullets li{
+    margin-bottom:9px;
+    color:#31353c;
+  }
+  .highlight{
+    display:inline-block;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+    font-size:12px;
+    font-weight:600;
+    background:var(--accent-soft);
+    color:var(--accent);
+    padding:5px 11px;
+    border-radius:6px;
+    margin:2px 8px 12px 0;
+  }
+  .note-box{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+    font-size:13.5px;
+    color:var(--sub);
+    background:var(--card);
+    border:1px solid var(--line);
+    border-left:3px solid var(--accent);
+    padding:14px 16px;
+    border-radius:4px;
+    margin-top:16px;
+  }
+  .case-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:28px 30px;
+  }
+  .case-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+    margin:22px 0;
+  }
+  @media (max-width:600px){ .case-grid{grid-template-columns:1fr;} }
+  .case-block h4{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+    font-size:12.5px;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    color:var(--ink);
+    margin:0 0 8px;
+  }
+  .case-block p, .case-block li{
+    font-size:14.5px;
+    color:#3f434b;
+  }
+  .stat-row{
+    display:flex;
+    gap:28px;
+    flex-wrap:wrap;
+    margin:18px 0 4px;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  }
+  .stat{min-width:110px;}
+  .stat .num{font-size:24px;font-weight:700;color:var(--accent);}
+  .stat .lab{font-size:12px;color:var(--sub);}
+  .proj-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:26px;
+  }
+  @media (max-width:600px){ .proj-grid{grid-template-columns:1fr;} }
+  .proj{
+    border-top:1px solid var(--line);
+    padding-top:16px;
+  }
+  .proj h4{
+    font-size:16.5px;
+    margin:0 0 4px;
+    font-weight:600;
+  }
+  .proj .tag{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+    font-size:11px;
+    color:var(--sub);
+    margin-bottom:8px;
+    display:block;
+  }
+  .proj p{font-size:14px;color:#3f434b;margin:0;}
+  .tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  }
+  .tags span{
+    font-size:12px;
+    background:var(--tag);
+    color:var(--tag-ink);
+    padding:6px 12px;
+    border-radius:100px;
+  }
+  footer{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:40px 28px 80px;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+    color:var(--sub);
+    font-size:13px;
+  }
+  footer a{color:var(--accent);text-decoration:none;}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="eyebrow">Product Management</div>
+  <h1>Megha Nigwal</h1>
+  <p class="role">Chemical Engineering, IIT Bombay — building products people actually use</p>
+  <p class="intro">I learned product management by shipping: a B2B manufacturing app used across 120+ countries as a PM intern, and a set of case studies that trace a problem from a messy root cause to a shippable MVP. I care about finding the one thing that's actually broken before proposing a fix for it.</p>
+  <div class="contact-row">
+    <a href="mailto:meghanigwal.iitb@gmail.com">meghanigwal.iitb@gmail.com</a>
+    <a href="https://www.linkedin.com/in/megha-nigwal-3516b7194/" target="_blank" rel="noopener">LinkedIn</a>
+    <span>IIT Bombay, Chemical Engineering</span>
+  </div>
+</header>
+
+<nav class="section-nav">
+  <a href="#experience">Experience</a>
+  <a href="#case-study">Featured Case Study</a>
+  <a href="#projects">Projects</a>
+  <a href="#leadership">Leadership</a>
+  <a href="#more">More</a>
+</nav>
+
+<main>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="entry">
+      <h3>Product Management Intern — KonnectBox</h3>
+      <div class="meta">June 2022 – July 2022 · Platform spanning 120+ countries, 3K suppliers, 10K retailers</div>
+      <div class="highlight">Letter of Recommendation from the Product Management Team Head</div>
+      <ul class="bullets">
+        <li>Led the development of <strong>Factory OS</strong>, a B2B garment-manufacturing growth app, from scratch — built to help 20 million+ micro manufacturers across Asia go global.</li>
+        <li>Built an Inventory Management module to connect stakeholders into a single supply chain, and a time-cost estimator to help buyers filter the network for a suitable supplier.</li>
+        <li>Shipped an Order Management module to track stock, purchase orders, and sales orders end to end.</li>
+        <li>Ideated flows and designed wireframes, then built a high-fidelity Figma prototype for the entire app.</li>
+        <li>Ran weekly sprints in JIRA, owned the roadmap and backlog prioritization, and wrote feature documentation — contributing to a 150% rise in team efficiency.</li>
+        <li>Took a field trip to Tiruppur to understand the garment manufacturing market firsthand before designing for it.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="case-study">
+    <h2>Featured Case Study</h2>
+    <div class="case-card">
+      <h3>Unified Expenses</h3>
+      <div class="meta">Independent product case study — expense management for a mid-size enterprise</div>
+
+      <div class="stat-row">
+        <div class="stat"><div class="num">30 days</div><div class="lab">manager visibility lag</div></div>
+        <div class="stat"><div class="num">20%</div><div class="lab">of expenses mismatched at Finance</div></div>
+        <div class="stat"><div class="num">$10–20</div><div class="lab">small expenses employees don't bother filing</div></div>
+      </div>
+
+      <p style="font-size:14.5px;color:#3f434b;margin-top:18px;">The trigger: three different people were frustrated by the same expense system, for what looked like three different reasons. Managers only saw spend a month after it happened. Finance manually corrected roughly one in five submissions. Employees quietly stopped filing anything under $20 because it wasn't worth the hassle. Tracing all three back, the root cause was the same — the system only learns about spend when someone remembers to type it in, days after the fact.</p>
+
+      <div class="case-grid">
+        <div class="case-block">
+          <h4>The redesign</h4>
+          <ul class="bullets" style="padding-left:16px;">
+            <li>Multi-source capture — expenses are created from receipts, bookings, and card feeds, not just manual entry</li>
+            <li>A confidence score per field, so mismatches surface as a judgment call instead of a silent guess</li>
+            <li>Conflict reconciliation that routes disagreements to a person instead of auto-rejecting</li>
+            <li>Expenses grouped by trip, so a manager reviews one summary instead of five stray receipts</li>
+          </ul>
+        </div>
+        <div class="case-block">
+          <h4>What I held firm on</h4>
+          <ul class="bullets" style="padding-left:16px;">
+            <li>A person always makes the final approval call — never a fully automated decision on someone's money</li>
+            <li>North star metric: <em>straight-through rate</em> (clean, zero-correction approvals) instead of raw speed, so the number can't be gamed by rubber-stamping</li>
+            <li>An explicit MVP cutline — Phase 1 proves the model works end to end; automatic receipt-reading and fraud detection wait for Phase 2</li>
+          </ul>
+        </div>
+      </div>
+
+      <p style="font-size:14.5px;color:#3f434b;">Delivered as a 17-slide product spec plus three clickable prototypes — employee filing flow, manager approval flow, and a finance rules console — built to walk a panel through the reasoning end to end, not just the screens.</p>
+
+      <div class="note-box">Full case study deck and prototype walkthrough available on request.</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Other Projects</h2>
+    <div class="proj-grid">
+      <div class="proj">
+        <h4>Netflix Analysis</h4>
+        <span class="tag">Nextleap Product Management Fellowship</span>
+        <p>Studied Netflix users' search and discovery behavior to map business outcomes to customer needs, using KPI trees, user personas, and journey mapping to find acquisition-funnel levers for revenue growth.</p>
+      </div>
+      <div class="proj">
+        <h4>Swiggy Instamart — Delivery Time Case Study</h4>
+        <span class="tag">Nextleap Product Management Fellowship</span>
+        <p>Built an empathy map for delivery executives to understand delivery-time bottlenecks, then devised an equation-based solution to trade off buffer time using their direct feedback.</p>
+      </div>
+      <div class="proj">
+        <h4>SQL Data Warehouse Project</h4>
+        <span class="tag">SQL Bootcamp</span>
+        <p>Built scalable data-processing workflows to clean, normalize, and enrich data from multiple heterogeneous sources, then applied business logic to produce SQL views ready for downstream analytics.</p>
+      </div>
+      <div class="proj">
+        <h4>Laptop Heating Problem</h4>
+        <span class="tag">Course Project, Prof. P. Sunthar</span>
+        <p>Modelled a laptop's cooling system as a 1-D heat transfer problem and optimized fin shape and material to maximize convective heat loss and improve GPU performance.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="leadership">
+    <h2>Leadership</h2>
+    <div class="entry">
+      <h3>Department Head, Green Campus — National Service Scheme, IIT Bombay</h3>
+      <ul class="bullets">
+        <li>Headed Public Relations for FLARE, NSS IIT Bombay's flagship initiative, reaching participants across 30,000+ colleges nationwide.</li>
+        <li>Led a two-tier team of 8 Activity Associates and 100+ volunteers focused on nature conservation.</li>
+        <li>Ran a virtual session on bottle plantation and origami for 800+ students, and planted 200+ trees across 6 hostels with Sankalptaru NGO.</li>
+        <li>Grew and created content for <em>nature_iitb</em>, NSS IIT Bombay's Instagram handle, to 1,500+ followers.</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <h3>Institute Web Convener — Institute Cultural Council, IIT Bombay</h3>
+      <ul class="bullets">
+        <li>Owned the ideation, upgrades, and maintenance of the Institute Gymkhana website for event updates.</li>
+        <li>Kicked off development of an online music portal for the Institute Cultural Council's Music Club.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="more">
+    <h2>More</h2>
+    <div class="entry">
+      <h3>Civil Services Examination Preparation (UPSC)</h3>
+      <div class="meta">Full-time · 2024 – 2026</div>
+      <p style="font-size:14.5px;color:#3f434b;">Built analytical thinking, research discipline, and structured problem-solving by preparing full-time for India's civil services exam — synthesizing large, messy information sets into concise, decision-ready insights.</p>
+    </div>
+    <div class="entry">
+      <h3>Skills</h3>
+      <div class="tags">
+        <span>Product Roadmapping</span>
+        <span>Backlog Prioritization</span>
+        <span>Figma</span>
+        <span>JIRA / Agile Sprints</span>
+        <span>SQL</span>
+        <span>User Research</span>
+        <span>KPI Trees &amp; Journey Mapping</span>
+        <span>Wireframing &amp; Prototyping</span>
+      </div>
+    </div>
+    <div class="entry">
+      <h3>Off the desk</h3>
+      <p style="font-size:14.5px;color:#3f434b;">Trekked to Kedarkantha (12,500 ft) and Kalsubai (1,646 m); interviewed an IFS officer for a webinar on tiger conservation; ran a plastic-bottle-plantation workshop for kids from 500 schools; 80+ hours volunteering with NSS IIT Bombay.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Megha Nigwal · <a href="mailto:meghanigwal.iitb@gmail.com">meghanigwal.iitb@gmail.com</a> · <a href="https://www.linkedin.com/in/megha-nigwal-3516b7194/" target="_blank" rel="noopener">LinkedIn</a>
+</footer>
+
+</body>
+</html>

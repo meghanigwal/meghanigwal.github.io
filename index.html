@@ -3,526 +3,529 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Megha Nigwal — Product Manager</title>
+<title>Megha Nigwal, Product Manager</title>
+<meta name="description" content="Product manager. Working on a CRM and ERP for Athaya Football Academy. Previously a product management intern at KonnectBox. IIT Bombay.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#16181d;
-    --sub:#5b616e;
-    --line:#e7e6e2;
-    --paper:#fbfaf7;
+    --paper:#f7f8f5;
     --card:#ffffff;
-    --accent:#b5462f;
-    --accent-soft:#f3e6e1;
-    --tag:#eef0ea;
-    --tag-ink:#3d4a3a;
-    --maxw:880px;
+    --ink:#13213a;
+    --body:#3a465c;
+    --mute:#6b7689;
+    --line:#dfe3e8;
+    --pitch:#17694f;
+    --pitch-soft:#e3f1eb;
+    --now:#f0a81c;
+    --c-iit:#2f80d0;
+    --c-kb:#e0544a;
+    --c-upsc:#7460d6;
+    --c-ath:#17694f;
+    --maxw:1080px;
+    --display:'Bricolage Grotesque','Segoe UI',Helvetica,Arial,sans-serif;
+    --text:'Public Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
   }
   *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    font-family:'Iowan Old Style','Palatino Linotype',Georgia,'Times New Roman',serif;
-    background:var(--paper);
-    color:var(--ink);
-    line-height:1.6;
+  html{scroll-behavior:smooth;scroll-padding-top:72px;}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  body{margin:0;background:var(--paper);color:var(--body);font-family:var(--text);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  a{color:var(--pitch);}
+  a:focus-visible,summary:focus-visible{outline:3px solid var(--now);outline-offset:3px;border-radius:4px;}
+  img{max-width:100%;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+
+  /* top bar */
+  .bar{position:sticky;top:0;z-index:10;background:rgba(247,248,245,.92);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line);}
+  .bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px;}
+  .bar .who{font-family:var(--display);font-weight:700;color:var(--ink);text-decoration:none;font-size:17px;white-space:nowrap;}
+  .bar nav{display:flex;gap:22px;font-size:14px;font-weight:500;overflow-x:auto;scrollbar-width:none;}
+  .bar nav::-webkit-scrollbar{display:none;}
+  .bar nav a{color:var(--body);text-decoration:none;white-space:nowrap;padding:6px 0;}
+  .bar nav a:hover{color:var(--pitch);}
+  .bar nav a.on{color:var(--pitch);box-shadow:inset 0 -2px 0 var(--pitch);}
+  @media (max-width:640px){ .bar .who{display:none;} .bar .wrap{justify-content:flex-start;} }
+
+  /* hero */
+  .band{background:var(--ink);color:#cfd8e8;position:relative;overflow:hidden;}
+  .band::before{content:"";position:absolute;right:-140px;top:-160px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#2a8f6f 0,#17694f 45%,transparent 70%);opacity:.55;}
+  .band::after{content:"";position:absolute;right:250px;top:70px;width:54px;height:54px;border-radius:50%;background:var(--now);}
+  @media (max-width:900px){ .band::after{display:none;} .band::before{opacity:.3;} }
+  .hero{position:relative;z-index:1;padding-top:72px;padding-bottom:56px;}
+  .band .hero h1{color:#fff;}
+  .band .hero .lede{color:#cfd8e8;}
+  .band .btn{border-color:#fff;color:#fff;}
+  .band .btn:hover{background:#fff;color:var(--ink);}
+  .band .btn.solid{background:var(--now);border-color:var(--now);color:var(--ink);}
+  .band .btn.solid:hover{background:#ffc145;border-color:#ffc145;}
+  .hero h1{font-family:var(--display);font-weight:700;color:var(--ink);font-size:clamp(34px,5.4vw,60px);line-height:1.05;letter-spacing:-0.02em;margin:0 0 20px;max-width:19ch;}
+  .hero .lede{font-size:clamp(17px,1.6vw,19px);max-width:60ch;margin:0 0 28px;color:var(--body);}
+  .actions{display:flex;flex-wrap:wrap;gap:10px;}
+  .btn{display:inline-block;font-weight:600;font-size:15px;text-decoration:none;padding:11px 18px;border-radius:8px;border:1.5px solid var(--ink);color:var(--ink);background:transparent;}
+  .btn:hover{background:var(--ink);color:#fff;}
+  .btn.solid{background:var(--pitch);border-color:var(--pitch);color:#fff;}
+  .btn.solid:hover{background:#0f5140;border-color:#0f5140;}
+
+  /* the path: career at a glance */
+  .path{margin:48px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(4,1fr);position:relative;}
+  .path::before{content:"";position:absolute;left:0;right:0;top:9px;height:2px;background:linear-gradient(90deg,var(--c-iit),var(--c-kb),var(--c-upsc),#35c79a);opacity:.7;}
+  .path li{position:relative;}
+  .path a{display:block;color:inherit;text-decoration:none;padding:34px 20px 10px 0;border-radius:8px;}
+  .path a::before{content:"";position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:var(--dot);border:3px solid var(--ink);box-shadow:0 0 0 2px var(--dot);transition:transform .15s;}
+  .path a:hover::before,.path a:focus-visible::before{transform:scale(1.25);}
+  .path a:hover .what{text-decoration:underline;}
+  .path li.now a::before{animation:pulse 2s ease-out 3;}
+  @keyframes pulse{0%{box-shadow:0 0 0 2px var(--dot),0 0 0 2px rgba(53,199,154,.6);}100%{box-shadow:0 0 0 2px var(--dot),0 0 0 16px rgba(53,199,154,0);}}
+  @media (prefers-reduced-motion:reduce){ .path li.now a::before{animation:none;} .path a::before{transition:none;} }
+  .path .when{font-family:var(--display);font-weight:700;color:#fff;font-size:19px;line-height:1.2;}
+  .path .what{font-weight:600;color:#fff;margin-top:6px;font-size:15px;line-height:1.35;}
+  .path .where{font-size:14px;color:#aab6cb;line-height:1.4;margin-top:2px;}
+  .path .tag{display:inline-block;margin-top:8px;font-size:12px;font-weight:600;color:var(--ink);background:#35c79a;border-radius:100px;padding:2px 10px;}
+  .path .go{display:block;font-size:13px;color:#8fa0bb;margin-top:8px;}
+  .path a:hover .go{color:#fff;}
+  @media (max-width:760px){
+    .path{grid-template-columns:1fr;}
+    .path::before{left:9px;right:auto;top:0;bottom:0;width:2px;height:auto;background:linear-gradient(180deg,var(--c-iit),var(--c-kb),var(--c-upsc),#35c79a);}
+    .path a{padding:0 0 26px 38px;}
   }
-  .sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;}
-  header.hero{
-    max-width:var(--maxw);
-    margin:0 auto;
-    padding:76px 28px 40px;
-  }
-  .eyebrow{
-    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
-    text-transform:uppercase;
-    letter-spacing:.14em;
-    font-size:12px;
-    color:var(--accent);
-    font-weight:600;
-    margin-bottom:14px;
-  }
-  h1{
-    font-size:clamp(36px,6vw,58px);
-    margin:0 0 10px;
-    font-weight:400;
-    letter-spacing:-0.01em;
-    color:var(--ink);
-  }
-  .role{
-    font-size:19px;
-    color:var(--sub);
-    margin:0 0 26px;
-  }
-  .intro{
-    font-size:17px;
-    color:#31353c;
-    max-width:640px;
-    margin:0 0 30px;
-  }
-  .contact-row{
-    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    font-size:14px;
-  }
-  .contact-row a, .contact-row span{
-    padding:8px 14px;
-    border:1px solid var(--line);
-    border-radius:100px;
-    color:var(--ink);
-    text-decoration:none;
-    background:var(--card);
-    transition:border-color .15s, color .15s;
-  }
-  .contact-row a:hover{
-    border-color:var(--accent);
-    color:var(--accent);
-  }
-  nav.section-nav{
-    max-width:var(--maxw);
-    margin:0 auto;
-    padding:0 28px 6px;
-    display:flex;
-    gap:22px;
-    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
-    font-size:13px;
-    color:var(--sub);
-    border-bottom:1px solid var(--line);
-    flex-wrap:wrap;
-  }
-  nav.section-nav a{
-    color:var(--sub);
-    text-decoration:none;
-    padding-bottom:16px;
-    border-bottom:2px solid transparent;
-  }
-  nav.section-nav a:hover{
-    color:var(--ink);
-    border-bottom-color:var(--accent);
-  }
-  main{
-    max-width:var(--maxw);
-    margin:0 auto;
-    padding:0 28px;
-  }
-  section{
-    padding:52px 0;
-    border-bottom:1px solid var(--line);
-  }
-  section:last-of-type{border-bottom:none;}
-  h2{
-    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
-    font-size:12px;
-    text-transform:uppercase;
-    letter-spacing:.14em;
-    color:var(--accent);
-    font-weight:700;
-    margin:0 0 26px;
-  }
-  h3{
-    font-size:23px;
-    font-weight:600;
-    margin:0 0 4px;
-    color:var(--ink);
-  }
-  .meta{
-    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
-    font-size:13px;
-    color:var(--sub);
-    margin-bottom:16px;
-  }
-  .entry{margin-bottom:40px;}
-  .entry:last-child{margin-bottom:0;}
-  ul.bullets{
-    margin:0;
-    padding-left:20px;
-  }
-  ul.bullets li{
-    margin-bottom:9px;
-    color:#31353c;
-  }
-  .highlight{
-    display:inline-block;
-    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
-    font-size:12px;
-    font-weight:600;
-    background:var(--accent-soft);
-    color:var(--accent);
-    padding:5px 11px;
-    border-radius:6px;
-    margin:2px 8px 12px 0;
-  }
-  .note-box{
-    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
-    font-size:13.5px;
-    color:var(--sub);
-    background:var(--card);
-    border:1px solid var(--line);
-    border-left:3px solid var(--accent);
-    padding:14px 16px;
-    border-radius:4px;
-    margin-top:16px;
-  }
-  .case-card{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:10px;
-    padding:28px 30px;
-  }
-  .case-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:22px;
-    margin:22px 0;
-  }
-  @media (max-width:600px){ .case-grid{grid-template-columns:1fr;} }
-  .case-block h4{
-    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
-    font-size:12.5px;
-    text-transform:uppercase;
-    letter-spacing:.06em;
-    color:var(--ink);
-    margin:0 0 8px;
-  }
-  .case-block p, .case-block li{
-    font-size:14.5px;
-    color:#3f434b;
-  }
-  .stat-row{
-    display:flex;
-    gap:28px;
-    flex-wrap:wrap;
-    margin:18px 0 4px;
-    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
-  }
-  .stat{min-width:110px;}
-  .stat .num{font-size:24px;font-weight:700;color:var(--accent);}
-  .stat .lab{font-size:12px;color:var(--sub);}
-  .proj-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:26px;
-  }
-  @media (max-width:600px){ .proj-grid{grid-template-columns:1fr;} }
-  .proj{
-    border-top:1px solid var(--line);
-    padding-top:16px;
-  }
-  .proj h4{
-    font-size:16.5px;
-    margin:0 0 4px;
-    font-weight:600;
-  }
-  .proj .tag{
-    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
-    font-size:11px;
-    color:var(--sub);
-    margin-bottom:8px;
-    display:block;
-  }
-  .proj p{font-size:14px;color:#3f434b;margin:0;}
-  .tags{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
-  }
-  .tags span{
-    font-size:12px;
-    background:var(--tag);
-    color:var(--tag-ink);
-    padding:6px 12px;
-    border-radius:100px;
-  }
-  footer{
-    max-width:var(--maxw);
-    margin:0 auto;
-    padding:40px 28px 80px;
-    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
-    color:var(--sub);
-    font-size:13px;
-  }
-  footer a{color:var(--accent);text-decoration:none;}
-  .shots{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0 6px;}
-  @media (max-width:600px){ .shots{grid-template-columns:1fr;} }
-  .shots figure{margin:0;}
-  .shots figure.wide{grid-column:1 / -1;}
-  .shots img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f3f5fa;}
-  .shots figcaption{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;color:var(--sub);margin-top:6px;}
-  .link-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:13.5px;}
-  .link-row a{padding:8px 14px;border-radius:100px;text-decoration:none;border:1px solid var(--accent);color:var(--accent);background:var(--card);}
-  .link-row a.primary{background:var(--accent);color:#fff;}
+
+  /* sections */
+  section{padding:64px 0 0;}
+  h2{font-family:var(--display);font-weight:700;color:var(--ink);font-size:clamp(24px,3vw,32px);letter-spacing:-0.01em;line-height:1.15;margin:0 0 8px;}
+  main h2::after{content:"";display:block;width:44px;height:4px;border-radius:2px;background:var(--now);margin-top:10px;}
+  .sub{margin:0 0 28px;color:var(--mute);max-width:62ch;}
+
+  /* work */
+  .work{--acc:var(--pitch);--tint:var(--pitch-soft);background:var(--card);border:1px solid var(--line);border-top:5px solid var(--acc);border-radius:14px;overflow:hidden;margin-bottom:28px;transition:box-shadow .2s,transform .2s;}
+  .work:hover{box-shadow:0 14px 34px -18px rgba(19,33,58,.35);transform:translateY(-2px);}
+  @media (prefers-reduced-motion:reduce){ .work{transition:none;} .work:hover{transform:none;} }
+  .work.kb{--acc:var(--c-kb);--tint:#fdeceb;}
+  .work.ux{--acc:var(--c-upsc);--tint:#efecfc;}
+  .work .top{display:grid;grid-template-columns:1.05fr 1fr;gap:0;}
+  .work .shot{background:var(--tint);border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:center;gap:14px;padding:24px;}
+  .thumbs{display:flex;gap:8px;flex-wrap:wrap;}
+  .thumbs button{font:inherit;font-size:13px;font-weight:600;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:100px;padding:5px 12px;cursor:pointer;}
+  .thumbs button:hover{border-color:var(--acc);}
+  .thumbs button[aria-pressed="true"]{background:var(--acc);border-color:var(--acc);color:#fff;}
+  .thumbs button:focus-visible{outline:3px solid var(--now);outline-offset:2px;}
+  .work .shot img{display:block;width:100%;height:auto;border-radius:6px;border:1px solid var(--line);}
+  .work .say{padding:30px 32px;}
+  .work .role{font-size:14px;font-weight:600;color:var(--acc);margin:0 0 6px;}
+  .work h3{font-family:var(--display);font-weight:700;color:var(--ink);font-size:26px;line-height:1.15;margin:0 0 12px;letter-spacing:-0.01em;}
+  .work p{margin:0 0 14px;}
+  .facts{display:flex;flex-wrap:wrap;gap:8px 24px;margin:18px 0 20px;padding:0;list-style:none;}
+  .facts li{font-size:14px;color:var(--mute);line-height:1.3;}
+  .facts b{display:block;font-family:var(--display);font-size:24px;color:var(--acc);font-weight:700;}
+  .links{display:flex;flex-wrap:wrap;gap:8px;}
+  .links a{font-size:14px;font-weight:600;text-decoration:none;padding:8px 14px;border-radius:8px;border:1.5px solid var(--acc);color:var(--acc);}
+  .links a.solid{background:var(--acc);color:#fff;}
+  .links a:hover{background:var(--ink);border-color:var(--ink);color:#fff;}
+  @media (max-width:820px){ .work .top{grid-template-columns:1fr;} .work .shot{border-right:none;border-bottom:1px solid var(--line);padding:16px;} .work .say{padding:24px 20px;} }
+
+  details{border-top:1px solid var(--line);}
+  summary{cursor:pointer;list-style:none;padding:16px 32px;font-weight:600;color:var(--ink);font-size:15px;display:flex;justify-content:space-between;align-items:center;}
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+";font-family:var(--display);font-size:22px;line-height:1;color:var(--acc);}
+  details[open] summary::after{content:"\2212";}
+  summary:hover{background:var(--tint);}
+  .more{padding:8px 32px 30px;}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+  .cols h4{font-size:15px;color:var(--ink);margin:0 0 8px;}
+  .more ul{margin:0;padding-left:18px;}
+  .more li{margin-bottom:7px;font-size:15px;}
+  .gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px;}
+  .gallery figure{margin:0;}
+  .gallery img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:6px;background:#f3f5fa;}
+  .gallery figcaption,.note{font-size:13px;color:var(--mute);margin-top:6px;}
+  @media (max-width:820px){ summary{padding:16px 20px;} .more{padding:8px 20px 24px;} .cols,.gallery{grid-template-columns:1fr;} }
+
+  /* experience rows: date gutter keeps the timeline readable all the way down */
+  .rows{border-top:1px solid var(--line);}
+  .row{--acc:var(--ink);display:grid;grid-template-columns:190px 1fr;gap:24px;padding:26px 16px;margin:0 -16px;border-bottom:1px solid var(--line);border-radius:10px;scroll-margin-top:72px;}
+  .row .date{border-left:4px solid var(--acc);padding-left:12px;align-self:start;}
+  .row:target{animation:flash 2.2s ease-out 1;}
+  @keyframes flash{0%,35%{background:#fff6dc;}100%{background:transparent;}}
+  @media (prefers-reduced-motion:reduce){ .row:target{animation:none;background:#fff6dc;} }
+  .row .date{font-family:var(--display);font-weight:700;color:var(--ink);font-size:17px;line-height:1.3;}
+  .row .date span{display:block;font-family:var(--text);font-weight:400;font-size:14px;color:var(--mute);margin-top:2px;}
+  .row h3{font-size:18px;color:var(--ink);margin:0 0 4px;font-weight:600;}
+  .row .ctx{font-size:14px;color:var(--mute);margin:0 0 10px;}
+  .row ul{margin:0;padding-left:18px;}
+  .row li{margin-bottom:6px;font-size:15px;}
+  .badge{display:inline-block;font-size:13px;font-weight:600;color:#a8332b;background:#fdeceb;border-radius:6px;padding:4px 10px;margin:0 0 10px;}
+  @media (max-width:700px){ .row{grid-template-columns:1fr;gap:8px;} }
+
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:0 36px;border-top:1px solid var(--line);}
+  .grid > div{padding:20px 0;border-bottom:1px solid var(--line);}
+  .grid h3{font-size:17px;color:var(--ink);margin:0 0 2px;font-weight:600;}
+  .grid .ctx{color:var(--c-iit);font-weight:600;}
+  .grid .ctx{font-size:13px;color:var(--mute);margin:0 0 8px;}
+  .grid p{margin:0;font-size:15px;}
+  @media (max-width:700px){ .grid{grid-template-columns:1fr;} }
+
+  .chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none;}
+  .chips li{font-size:14px;font-weight:600;border-radius:100px;padding:6px 14px;color:#0f5140;background:var(--pitch-soft);}
+  .chips li:nth-child(4n+2){color:#1f5a96;background:#e5f0fb;}
+  .chips li:nth-child(4n+3){color:#4a3aa8;background:#efecfc;}
+  .chips li:nth-child(4n+4){color:#a8332b;background:#fdeceb;}
+
+  footer{margin-top:72px;background:var(--ink);color:#c9d2e2;padding:48px 0 56px;}
+  footer h2{color:#fff;margin-bottom:14px;}
+  footer p{margin:0 0 20px;max-width:56ch;}
+  footer .btn{border-color:#fff;color:#fff;}
+  footer .btn:hover{background:#fff;color:var(--ink);}
+  footer .btn.solid{background:var(--now);border-color:var(--now);color:var(--ink);}
+  footer .btn.solid:hover{background:#ffc145;border-color:#ffc145;color:var(--ink);}
 </style>
 </head>
 <body>
 
-<header class="hero">
-  <div class="eyebrow">Product Management</div>
-  <h1>Megha Nigwal</h1>
-  <p class="role">Chemical Engineering, IIT Bombay — building products people actually use</p>
-  <p class="intro">I learned product management by shipping: a B2B manufacturing app used across 120+ countries as a PM intern, and a set of case studies that trace a problem from a messy root cause to a shippable MVP. I care about finding the one thing that's actually broken before proposing a fix for it.</p>
-  <div class="contact-row">
-    <a href="mailto:meghanigwal.iitb@gmail.com">meghanigwal.iitb@gmail.com</a>
-    <a href="https://www.linkedin.com/in/megha-nigwal-3516b7194/" target="_blank" rel="noopener">LinkedIn</a>
-    <span>IIT Bombay, Chemical Engineering</span>
+<div class="bar">
+  <div class="wrap">
+    <a class="who" href="#top">Megha Nigwal</a>
+    <nav aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
-</header>
+</div>
 
-<nav class="section-nav">
-  <a href="#experience">Experience</a>
-  <a href="#athaya-erp">Athaya ERP</a>
-  <a href="#factory-os">Factory OS</a>
-  <a href="#case-study">Featured Case Study</a>
-  <a href="#projects">Projects</a>
-  <a href="#leadership">Leadership</a>
-  <a href="#more">More</a>
-</nav>
+<header class="band" id="top"><div class="hero wrap">
+  <h1>Hi, I'm Megha. I like turning messy, manual work into simple products.</h1>
+  <p class="lede">I'm a product manager who studied Chemical Engineering at IIT Bombay. I'm now building a CRM and ERP for Athaya Football Academy, which coaches across 8+ housing societies. Before that, I worked on Factory OS, an app for garment manufacturers and the brands that buy from them, as a product management intern at KonnectBox.</p>
+  <div class="actions">
+    <a class="btn solid" href="mailto:meghanigwal.iitb@gmail.com">Email me</a>
+    <a class="btn" href="https://www.linkedin.com/in/megha-nigwal-3516b7194/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://github.com/meghanigwal" target="_blank" rel="noopener">GitHub</a>
+  </div>
 
-<main>
+  <ol class="path" aria-label="Career at a glance, oldest to newest">
+    <li style="--dot:var(--c-iit)"><a href="#leadership">
+      <div class="when">IIT Bombay</div>
+      <div class="what">Chemical Engineering</div>
+      <div class="where">I led NSS Green Campus and the cultural council's web team</div>
+      <span class="go">See leadership</span>
+    </a></li>
+    <li style="--dot:var(--c-kb)"><a href="#exp-konnectbox">
+      <div class="when">Jun – Jul 2022</div>
+      <div class="what">Product Management Intern</div>
+      <div class="where">KonnectBox. I worked on the Factory OS app</div>
+      <span class="go">See this role</span>
+    </a></li>
+    <li style="--dot:var(--c-upsc)"><a href="#exp-upsc">
+      <div class="when">2024 – 2026</div>
+      <div class="what">Civil services exam preparation</div>
+      <div class="where">Full-time</div>
+      <span class="go">See this period</span>
+    </a></li>
+    <li class="now" style="--dot:#35c79a"><a href="#exp-athaya">
+      <div class="when">Jun 2026 – now</div>
+      <div class="what">Product Manager</div>
+      <div class="where">Athaya Football Academy. I'm building its CRM and ERP</div>
+      <span class="tag">Current role</span>
+      <span class="go">See this role</span>
+    </a></li>
+  </ol>
+</div></header>
+
+<main class="wrap">
+
+  <section id="work">
+    <h2>Selected work</h2>
+    <p class="sub">Three projects, newest first. Open any of them for the detail.</p>
+
+    <article class="work" id="athaya-erp">
+      <div class="top">
+        <div class="shot" data-switch>
+          <img src="assets/athaya-erp/01-dashboard.jpg" alt="Athaya ERP dashboard showing players, leads, conversion rate, revenue and pending payments">
+          <div class="thumbs" role="group" aria-label="Choose a screen">
+            <button type="button" aria-pressed="true" data-src="assets/athaya-erp/01-dashboard.jpg" data-alt="Athaya ERP dashboard showing players, leads, conversion rate, revenue and pending payments">Dashboard</button>
+            <button type="button" aria-pressed="false" data-src="assets/athaya-erp/02-leads-pipeline.jpg" data-alt="Leads and sales list showing each enquiry's status">Leads</button>
+            <button type="button" aria-pressed="false" data-src="assets/athaya-erp/03-player-profile.jpg" data-alt="Player profile with parent details, fee details and a record payment button">Player profile</button>
+          </div>
+        </div>
+        <div class="say">
+          <p class="role">Product Manager, Athaya Football Academy, 2026</p>
+          <h3>Athaya ERP: from manual records to one connected system</h3>
+          <p>Enquiries, players, coach assignments and fees were all tracked by hand, so nothing connected. I interviewed the owner, wrote the requirements, designed the screens, and directed a developer through the build.</p>
+          <ul class="facts">
+            <li><b>8+</b>societies</li>
+            <li><b>5</b>areas, one system</li>
+            <li><b>9</b>report types</li>
+          </ul>
+          <div class="links"><a class="solid" href="https://github.com/meghanigwal/athaya-erp" target="_blank" rel="noopener">View on GitHub</a></div>
+        </div>
+      </div>
+      <details>
+        <summary>What the system does and how I scoped it</summary>
+        <div class="more">
+          <div class="cols">
+            <div>
+              <h4>What the system does</h4>
+              <ul>
+                <li>Leads pipeline from new enquiry through trial to converted, with one-click convert-to-player</li>
+                <li>Centre, batch, coach, players: a structure that matches how the academy runs</li>
+                <li>Fee tracking where each payment updates the player's status and flows into Finance</li>
+                <li>An import centre that brings in existing Excel sheets and catches duplicates by phone number</li>
+              </ul>
+            </div>
+            <div>
+              <h4>How I scoped it</h4>
+              <ul>
+                <li>One system instead of five separate tools, so the same record carries from enquiry to player to payment</li>
+                <li>I asked for per-person permissions and an activity log of who changed what, so staff can be given access safely</li>
+                <li>I kept Version 1 small: no payroll, tax automation, attendance analytics or parent app. These can be added later</li>
+              </ul>
+            </div>
+          </div>
+          <p class="note">Screens show the system's built-in sample data, not real players or families. My part was product: requirements, UX, prioritisation, operational requirements and the SOPs staff follow. A developer on the team wrote the code and handled deployment.</p>
+        </div>
+      </details>
+    </article>
+
+    <article class="work kb" id="factory-os">
+      <div class="top">
+        <div class="shot" data-switch>
+          <img src="assets/factory-os/01-onboarding-section.jpg" alt="Onboarding and login section of the Factory OS Partner App with nine captioned screens" loading="lazy">
+          <div class="thumbs" role="group" aria-label="Choose a screen">
+            <button type="button" aria-pressed="true" data-src="assets/factory-os/01-onboarding-section.jpg" data-alt="Onboarding and login section of the Factory OS Partner App with nine captioned screens">Onboarding</button>
+            <button type="button" aria-pressed="false" data-src="assets/factory-os/03-inventory.jpg" data-alt="Partner App inventory screens">Inventory</button>
+            <button type="button" aria-pressed="false" data-src="assets/factory-os/04-workflow.jpg" data-alt="Partner App workflow management screens">Workflow</button>
+            <button type="button" aria-pressed="false" data-src="assets/factory-os/05-discover.jpg" data-alt="Marketplace App discover and search screens">Discover</button>
+            <button type="button" aria-pressed="false" data-src="assets/factory-os/07-cart-negotiation.jpg" data-alt="Marketplace App cart screens showing price negotiation and minimum order quantity">Cart</button>
+          </div>
+        </div>
+        <div class="say">
+          <p class="role">Product Management Intern, KonnectBox, 2022</p>
+          <h3>Factory OS: two apps for manufacturers and the brands that buy from them</h3>
+          <p>I designed two apps: a Partner App where a factory sets up its profile and tracks inventory, production and staff, and a Marketplace App where a brand finds manufacturers, negotiates price and places wholesale orders.</p>
+          <ul class="facts">
+            <li><b>2</b>mobile apps</li>
+            <li><b>162</b>screens</li>
+            <li><b>23</b>documented sections</li>
+          </ul>
+          <div class="links">
+            <a class="solid" href="https://www.figma.com/design/7MFIAZ83eMDVa6mihkblpO/FOS_Final_Design--Copy-?node-id=1-2773" target="_blank" rel="noopener">Open the Figma file</a>
+            <a href="https://github.com/meghanigwal/factory-os-design" target="_blank" rel="noopener">Read the write-up</a>
+          </div>
+        </div>
+      </div>
+      <details>
+        <summary>What I designed and how the file is organised</summary>
+        <div class="more">
+          <div class="cols">
+            <div>
+              <h4>What I designed</h4>
+              <ul>
+                <li>Partner App: onboarding, a four-step factory setup, home, inventory, workflow, staff and roles, chat, notifications</li>
+                <li>Marketplace App: sign-up, discover and search, manufacturer profile, product, cart and checkout, orders</li>
+                <li>A design-review page: screenshots of the built app with the fixes needed, and the screens redrawn in response</li>
+              </ul>
+            </div>
+            <div>
+              <h4>How the file is organised</h4>
+              <ul>
+                <li>Pages named for their audience, sections ordered the way a user meets them</li>
+                <li>Screen codes such as P7.12 or M6.08, so a screen can be referred to without ambiguity</li>
+                <li>A "start here" guide with a glossary and a list of open questions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </details>
+    </article>
+
+    <article class="work ux" id="case-study">
+      <div class="say">
+        <p class="role">Independent product case study</p>
+        <h3>Unified Expenses: three complaints, one root cause</h3>
+        <p>Managers saw spend a month late. Finance corrected roughly one in five submissions. Employees stopped filing anything under $20. When I traced them back, all three had the same cause: the system only learns about spend when someone remembers to type it in, days after the fact.</p>
+        <ul class="facts">
+          <li><b>30 days</b>manager visibility lag</li>
+          <li><b>20%</b>of expenses mismatched at Finance</li>
+          <li><b>$10–20</b>expenses employees don't bother filing</li>
+        </ul>
+      </div>
+      <details>
+        <summary>My redesign and the decisions I made</summary>
+        <div class="more">
+          <div class="cols">
+            <div>
+              <h4>My redesign</h4>
+              <ul>
+                <li>Multi-source capture: expenses are created from receipts, bookings and card feeds, not just manual entry</li>
+                <li>A confidence score per field, so mismatches surface as a judgment call instead of a silent guess</li>
+                <li>Conflict reconciliation that routes disagreements to a person instead of auto-rejecting</li>
+                <li>Expenses grouped by trip, so a manager reviews one summary instead of five stray receipts</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Decisions I made</h4>
+              <ul>
+                <li>A person always makes the final approval call, never a fully automated decision on someone's money</li>
+                <li>North star metric: straight-through rate (clean, zero-correction approvals) instead of raw speed, so the number can't be gamed by rubber-stamping</li>
+                <li>An explicit MVP cutline. Phase 1 proves the model works end to end; automatic receipt-reading and fraud detection wait for Phase 2</li>
+              </ul>
+            </div>
+          </div>
+          <p class="note" style="margin-top:20px;">I delivered it as a 17-slide product spec plus three clickable prototypes: employee filing flow, manager approval flow, and a finance rules console. Full deck and prototype walkthrough available on request.</p>
+        </div>
+      </details>
+    </article>
+  </section>
 
   <section id="experience">
     <h2>Experience</h2>
-    <div class="entry">
-      <h3>Product Manager — Athaya Football Academy</h3>
-      <div class="meta">June 2026 – Present · Delhi–Gurgaon · Doorstep football coaching across 8+ housing societies</div>
-      <ul class="bullets">
-        <li>Scoped and owned requirements end to end for the academy's founding <strong>CRM &amp; ERP</strong>, interviewing the owner directly and replacing manual record-keeping — there was no software before this.</li>
-        <li>Designed the wireframes and prototypes that set the system's screens, flows, and information architecture.</li>
-        <li>Directed a developer through the build of CRM, Player management, Coaches, Centres, and Finance as one connected system rather than separate tools.</li>
-        <li>Specified automated weekly backups and hourly uptime monitoring, achieved at zero added infrastructure cost.</li>
-        <li>Ran the build in parallel with onboarding new coaches and centres, and wrote SOPs for data entry and system use across every module as the academy expanded.</li>
-      </ul>
-    </div>
-    <div class="entry">
-      <h3>Product Management Intern — KonnectBox</h3>
-      <div class="meta">June 2022 – July 2022 · Platform spanning 120+ countries, 3K suppliers, 10K retailers</div>
-      <div class="highlight">Letter of Recommendation from the Product Management Team Head</div>
-      <ul class="bullets">
-        <li>Led the development of <strong>Factory OS</strong>, a B2B garment-manufacturing growth app, from scratch — built to help 20 million+ micro manufacturers across Asia go global.</li>
-        <li>Built an Inventory Management module to connect stakeholders into a single supply chain, and a time-cost estimator to help buyers filter the network for a suitable supplier.</li>
-        <li>Shipped an Order Management module to track stock, purchase orders, and sales orders end to end.</li>
-        <li>Ideated flows and designed wireframes, then built a high-fidelity Figma prototype for the entire app.</li>
-        <li>Ran weekly sprints in JIRA, owned the roadmap and backlog prioritization, and wrote feature documentation — contributing to a 150% rise in team efficiency.</li>
-        <li>Took a field trip to Tiruppur to understand the garment manufacturing market firsthand before designing for it.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="athaya-erp">
-    <h2>Case Study — Athaya ERP</h2>
-    <div class="case-card">
-      <h3>Athaya ERP — from manual records to one connected system</h3>
-      <div class="meta">Athaya Football Academy · Product Manager · requirements, UX design, delivery</div>
-
-      <div class="stat-row">
-        <div class="stat"><div class="num">8+</div><div class="lab">housing societies served</div></div>
-        <div class="stat"><div class="num">5</div><div class="lab">business areas in one system</div></div>
-        <div class="stat"><div class="num">9</div><div class="lab">built-in report types</div></div>
-      </div>
-
-      <p style="font-size:14.5px;color:#3f434b;margin-top:18px;">Athaya coaches football at people's doorsteps, across housing societies in Delhi–Gurgaon. Enquiries, player records, coach assignments, and fees were all tracked by hand, so nothing connected: a new enquiry, the child it became, the batch they joined, and the fee they owed lived in different places. I interviewed the owner, turned that into requirements and screen designs, and directed a developer through the build of a single system where each of those is the same record moving forward.</p>
-
-      <div class="shots">
-        <figure class="wide"><img src="assets/athaya-erp/01-dashboard.jpg" alt="ERP dashboard with player, lead, revenue and pending-payment figures and a revenue chart" loading="lazy"><figcaption>Dashboard — the owner's daily view: players, leads, conversion, revenue, and pending payments.</figcaption></figure>
-        <figure><img src="assets/athaya-erp/02-leads-pipeline.jpg" alt="Leads and sales list showing each enquiry's status" loading="lazy"><figcaption>Leads &amp; Sales — every enquiry from first contact to conversion</figcaption></figure>
-        <figure><img src="assets/athaya-erp/03-player-profile.jpg" alt="Player profile with parent details, fee details and a record payment button" loading="lazy"><figcaption>Player profile — child, parent, training, and fees in one place</figcaption></figure>
-      </div>
-      <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;color:var(--sub);margin:4px 0 0;">Screens show the system's built-in sample data, not real players or families.</p>
-
-      <div class="case-grid">
-        <div class="case-block">
-          <h4>What the system does</h4>
-          <ul class="bullets" style="padding-left:16px;">
-            <li>Leads pipeline from new enquiry through trial to converted, with one-click convert-to-player</li>
-            <li>Centre → Batch → Coach → Players structure, matching how the academy actually runs</li>
-            <li>Fee tracking where each payment updates the player's status and flows into Finance automatically</li>
-            <li>An import centre that brings in existing Excel sheets and catches duplicates by phone number</li>
-          </ul>
-        </div>
-        <div class="case-block">
-          <h4>How it was scoped</h4>
-          <ul class="bullets" style="padding-left:16px;">
-            <li>One connected system, not five tools — the same record carries from enquiry to player to payment</li>
-            <li>Per-person permissions and an activity log of who changed what, so staff can be given access safely</li>
-            <li>An explicit Version 1 cutline: no payroll, tax automation, attendance analytics, or parent app — left out by design, with a data model that can take them later</li>
+    <p class="sub">Newest first.</p>
+    <div class="rows">
+      <div class="row" id="exp-athaya" style="--acc:var(--c-ath)">
+        <div class="date">Jun 2026 – now<span>Delhi–Gurgaon</span></div>
+        <div>
+          <h3>Product Manager, Athaya Football Academy</h3>
+          <p class="ctx">Doorstep football coaching across 8+ housing societies</p>
+          <ul>
+            <li>I gathered and wrote the requirements for the academy's first CRM and ERP by interviewing the owner. It replaced manual record-keeping; there was no software before this.</li>
+            <li>I designed the wireframes and prototypes that set the system's screens, flows and information architecture.</li>
+            <li>I directed a developer through the build of CRM, Player management, Coaches, Centres and Finance as one system rather than separate tools.</li>
+            <li>I specified automated weekly backups and hourly uptime monitoring, at no extra infrastructure cost.</li>
+            <li>I ran the build in parallel with onboarding new coaches and centres, and wrote SOPs for data entry and system use across every module as the academy expanded.</li>
           </ul>
         </div>
       </div>
-
-      <p style="font-size:14.5px;color:#3f434b;">My part was product: requirements, UX, prioritisation, operational requirements, and the SOPs staff follow. A developer on the team wrote the code and handled deployment.</p>
-
-      <div class="link-row">
-        <a class="primary" href="https://github.com/meghanigwal/athaya-erp" target="_blank" rel="noopener">View the project on GitHub</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="factory-os">
-    <h2>Case Study — Factory OS</h2>
-    <div class="case-card">
-      <h3>Factory OS — app design, organised and documented</h3>
-      <div class="meta">KonnectBox · Product Management Intern · Figma · two mobile apps, one design file</div>
-
-      <div class="stat-row">
-        <div class="stat"><div class="num">2</div><div class="lab">apps: one for manufacturers, one for brands</div></div>
-        <div class="stat"><div class="num">162</div><div class="lab">screens in the file</div></div>
-        <div class="stat"><div class="num">23</div><div class="lab">numbered, explained sections</div></div>
-      </div>
-
-      <p style="font-size:14.5px;color:#3f434b;margin-top:18px;">Factory OS connects garment and footwear manufacturers with the brands that buy from them. The design covers both sides: a <strong>Partner App</strong> where a factory sets up its profile, tracks inventory and production work, and manages staff; and a <strong>Marketplace App</strong> where a brand discovers manufacturers, negotiates price, and places wholesale orders. The file is laid out so someone with no design background can follow it — every screen has a code and a one-line explanation.</p>
-
-      <div class="shots">
-        <figure class="wide"><img src="assets/factory-os/01-onboarding-section.jpg" alt="Onboarding and login section of the Partner App, with a title, a short description and nine captioned screens" loading="lazy"><figcaption>How each section reads: a title, what it covers in plain language, then screens in order with a code and caption.</figcaption></figure>
-        <figure><img src="assets/factory-os/03-inventory.jpg" alt="Partner App inventory screens" loading="lazy"><figcaption>Partner App — inventory</figcaption></figure>
-        <figure><img src="assets/factory-os/04-workflow.jpg" alt="Partner App workflow management screens" loading="lazy"><figcaption>Partner App — production workflow</figcaption></figure>
-        <figure><img src="assets/factory-os/05-discover.jpg" alt="Marketplace App discover and search screens" loading="lazy"><figcaption>Marketplace App — discover manufacturers and products</figcaption></figure>
-        <figure><img src="assets/factory-os/07-cart-negotiation.jpg" alt="Marketplace App cart screens showing price negotiation and minimum order quantity" loading="lazy"><figcaption>Marketplace App — cart with price negotiation and minimum order quantity</figcaption></figure>
-      </div>
-
-      <div class="case-grid">
-        <div class="case-block">
-          <h4>What the design covers</h4>
-          <ul class="bullets" style="padding-left:16px;">
-            <li>Partner App: onboarding, a four-step factory setup, home, inventory, workflow, staff and roles, chat, notifications</li>
-            <li>Marketplace App: sign-up, discover and search, manufacturer profile, product, cart and checkout, orders</li>
-            <li>A design-review page: screenshots of the built app with the fixes needed, and the screens redrawn in response</li>
-          </ul>
-        </div>
-        <div class="case-block">
-          <h4>How the file is organised</h4>
-          <ul class="bullets" style="padding-left:16px;">
-            <li>Pages named for their audience; sections ordered the way a user meets them</li>
-            <li>Screen codes such as P7.12 or M6.08, so a screen can be referred to without ambiguity</li>
-            <li>A “start here” guide with a glossary (OTP, MOQ, GST, empty state) and a list of open questions</li>
+      <div class="row" id="exp-upsc" style="--acc:var(--c-upsc)">
+        <div class="date">2024 – 2026<span>Full-time</span></div>
+        <div>
+          <h3>Civil Services Examination preparation (UPSC)</h3>
+          <ul>
+            <li>I prepared full-time for India's civil services exam. Most of the work was research and structured writing: reading a lot of material and turning it into short, clear answers.</li>
           </ul>
         </div>
       </div>
-
-      <div class="link-row">
-        <a class="primary" href="https://www.figma.com/design/7MFIAZ83eMDVa6mihkblpO/FOS_Final_Design--Copy-?node-id=1-2773" target="_blank" rel="noopener">Open the Figma file</a>
-        <a href="https://github.com/meghanigwal/factory-os-design" target="_blank" rel="noopener">Read the write-up on GitHub</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="case-study">
-    <h2>Featured Case Study</h2>
-    <div class="case-card">
-      <h3>Unified Expenses</h3>
-      <div class="meta">Independent product case study — expense management for a mid-size enterprise</div>
-
-      <div class="stat-row">
-        <div class="stat"><div class="num">30 days</div><div class="lab">manager visibility lag</div></div>
-        <div class="stat"><div class="num">20%</div><div class="lab">of expenses mismatched at Finance</div></div>
-        <div class="stat"><div class="num">$10–20</div><div class="lab">small expenses employees don't bother filing</div></div>
-      </div>
-
-      <p style="font-size:14.5px;color:#3f434b;margin-top:18px;">The trigger: three different people were frustrated by the same expense system, for what looked like three different reasons. Managers only saw spend a month after it happened. Finance manually corrected roughly one in five submissions. Employees quietly stopped filing anything under $20 because it wasn't worth the hassle. Tracing all three back, the root cause was the same — the system only learns about spend when someone remembers to type it in, days after the fact.</p>
-
-      <div class="case-grid">
-        <div class="case-block">
-          <h4>The redesign</h4>
-          <ul class="bullets" style="padding-left:16px;">
-            <li>Multi-source capture — expenses are created from receipts, bookings, and card feeds, not just manual entry</li>
-            <li>A confidence score per field, so mismatches surface as a judgment call instead of a silent guess</li>
-            <li>Conflict reconciliation that routes disagreements to a person instead of auto-rejecting</li>
-            <li>Expenses grouped by trip, so a manager reviews one summary instead of five stray receipts</li>
-          </ul>
-        </div>
-        <div class="case-block">
-          <h4>What I held firm on</h4>
-          <ul class="bullets" style="padding-left:16px;">
-            <li>A person always makes the final approval call — never a fully automated decision on someone's money</li>
-            <li>North star metric: <em>straight-through rate</em> (clean, zero-correction approvals) instead of raw speed, so the number can't be gamed by rubber-stamping</li>
-            <li>An explicit MVP cutline — Phase 1 proves the model works end to end; automatic receipt-reading and fraud detection wait for Phase 2</li>
+      <div class="row" id="exp-konnectbox" style="--acc:var(--c-kb)">
+        <div class="date">Jun – Jul 2022<span>Internship</span></div>
+        <div>
+          <h3>Product Management Intern, KonnectBox</h3>
+          <p class="ctx">Platform spanning 120+ countries, 3K suppliers, 10K retailers</p>
+          <div class="badge">I received a Letter of Recommendation from the Product Management Team Head</div>
+          <ul>
+            <li>I led the development of Factory OS, a new B2B app for garment manufacturing, meant for the 20 million+ micro manufacturers across Asia.</li>
+            <li>I built an Inventory Management module to connect stakeholders into a single supply chain, and a time-cost estimator to help buyers filter the network for a suitable supplier.</li>
+            <li>I shipped an Order Management module to track stock, purchase orders and sales orders end to end.</li>
+            <li>I ideated flows and designed wireframes, then built a high-fidelity Figma prototype for the entire app.</li>
+            <li>I ran weekly sprints in JIRA, owned the roadmap and backlog prioritization, and wrote feature documentation, contributing to a 150% rise in team efficiency.</li>
+            <li>I took a field trip to Tiruppur to understand the garment manufacturing market firsthand before designing for it.</li>
           </ul>
         </div>
       </div>
-
-      <p style="font-size:14.5px;color:#3f434b;">Delivered as a 17-slide product spec plus three clickable prototypes — employee filing flow, manager approval flow, and a finance rules console — built to walk a panel through the reasoning end to end, not just the screens.</p>
-
-      <div class="note-box">Full case study deck and prototype walkthrough available on request.</div>
     </div>
   </section>
 
   <section id="projects">
-    <h2>Other Projects</h2>
-    <div class="proj-grid">
-      <div class="proj">
-        <h4>Netflix Analysis</h4>
-        <span class="tag">Nextleap Product Management Fellowship</span>
-        <p>Studied Netflix users' search and discovery behavior to map business outcomes to customer needs, using KPI trees, user personas, and journey mapping to find acquisition-funnel levers for revenue growth.</p>
+    <h2>Other projects</h2>
+    <p class="sub">Things I worked on during a fellowship and at IIT Bombay.</p>
+    <div class="grid">
+      <div>
+        <h3>Netflix Analysis</h3>
+        <p class="ctx">Nextleap Product Management Fellowship</p>
+        <p>I studied Netflix users' search and discovery behavior to map business outcomes to customer needs, using KPI trees, user personas and journey mapping to find acquisition-funnel levers for revenue growth.</p>
       </div>
-      <div class="proj">
-        <h4>Swiggy Instamart — Delivery Time Case Study</h4>
-        <span class="tag">Nextleap Product Management Fellowship</span>
-        <p>Built an empathy map for delivery executives to understand delivery-time bottlenecks, then devised an equation-based solution to trade off buffer time using their direct feedback.</p>
+      <div>
+        <h3>Swiggy Instamart delivery time case study</h3>
+        <p class="ctx">Nextleap Product Management Fellowship</p>
+        <p>I built an empathy map for delivery executives to understand delivery-time bottlenecks, then devised an equation-based solution to trade off buffer time using their direct feedback.</p>
       </div>
-      <div class="proj">
-        <h4>SQL Data Warehouse Project</h4>
-        <span class="tag">SQL Bootcamp</span>
-        <p>Built scalable data-processing workflows to clean, normalize, and enrich data from multiple heterogeneous sources, then applied business logic to produce SQL views ready for downstream analytics.</p>
+      <div>
+        <h3>SQL Data Warehouse Project</h3>
+        <p class="ctx">SQL Bootcamp</p>
+        <p>I built data-processing workflows to clean, normalize and enrich data from multiple heterogeneous sources, then applied business logic to produce SQL views ready for downstream analytics.</p>
       </div>
-      <div class="proj">
-        <h4>Laptop Heating Problem</h4>
-        <span class="tag">Course Project, Prof. P. Sunthar</span>
-        <p>Modelled a laptop's cooling system as a 1-D heat transfer problem and optimized fin shape and material to maximize convective heat loss and improve GPU performance.</p>
+      <div>
+        <h3>Laptop Heating Problem</h3>
+        <p class="ctx">Course Project, Prof. P. Sunthar</p>
+        <p>I modelled a laptop's cooling system as a 1-D heat transfer problem and optimized fin shape and material to maximize convective heat loss and improve GPU performance.</p>
       </div>
     </div>
   </section>
 
   <section id="leadership">
-    <h2>Leadership</h2>
-    <div class="entry">
-      <h3>Department Head, Green Campus — National Service Scheme, IIT Bombay</h3>
-      <ul class="bullets">
-        <li>Headed Public Relations for FLARE, NSS IIT Bombay's flagship initiative, reaching participants across 30,000+ colleges nationwide.</li>
-        <li>Led a two-tier team of 8 Activity Associates and 100+ volunteers focused on nature conservation.</li>
-        <li>Ran a virtual session on bottle plantation and origami for 800+ students, and planted 200+ trees across 6 hostels with Sankalptaru NGO.</li>
-        <li>Grew and created content for <em>nature_iitb</em>, NSS IIT Bombay's Instagram handle, to 1,500+ followers.</li>
-      </ul>
-    </div>
-    <div class="entry">
-      <h3>Institute Web Convener — Institute Cultural Council, IIT Bombay</h3>
-      <ul class="bullets">
-        <li>Owned the ideation, upgrades, and maintenance of the Institute Gymkhana website for event updates.</li>
-        <li>Kicked off development of an online music portal for the Institute Cultural Council's Music Club.</li>
-      </ul>
+    <h2>Leadership at IIT Bombay</h2>
+    <div class="rows" style="margin-top:20px;">
+      <div class="row" style="--acc:var(--c-iit)">
+        <div class="date">National Service Scheme<span>Green Campus</span></div>
+        <div>
+          <h3>Department Head, Green Campus</h3>
+          <ul>
+            <li>I headed Public Relations for FLARE, an NSS IIT Bombay initiative that reached participants across 30,000+ colleges nationwide.</li>
+            <li>I led a two-tier team of 8 Activity Associates and 100+ volunteers focused on nature conservation.</li>
+            <li>I ran a virtual session on bottle plantation and origami for 800+ students, and planted 200+ trees across 6 hostels with Sankalptaru NGO.</li>
+            <li>I grew and created content for nature_iitb, NSS IIT Bombay's Instagram handle, to 1,500+ followers.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row" style="--acc:var(--c-iit)">
+        <div class="date">Institute Cultural Council<span>Web</span></div>
+        <div>
+          <h3>Institute Web Convener</h3>
+          <ul>
+            <li>I owned the ideation, upgrades and maintenance of the Institute Gymkhana website for event updates.</li>
+            <li>I kicked off development of an online music portal for the Institute Cultural Council's Music Club.</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="more">
-    <h2>More</h2>
-    <div class="entry">
-      <h3>Civil Services Examination Preparation (UPSC)</h3>
-      <div class="meta">Full-time · 2024 – 2026</div>
-      <p style="font-size:14.5px;color:#3f434b;">Built analytical thinking, research discipline, and structured problem-solving by preparing full-time for India's civil services exam — synthesizing large, messy information sets into concise, decision-ready insights.</p>
-    </div>
-    <div class="entry">
-      <h3>Skills</h3>
-      <div class="tags">
-        <span>Product Roadmapping</span>
-        <span>Backlog Prioritization</span>
-        <span>Figma</span>
-        <span>JIRA / Agile Sprints</span>
-        <span>SQL</span>
-        <span>User Research</span>
-        <span>KPI Trees &amp; Journey Mapping</span>
-        <span>Wireframing &amp; Prototyping</span>
-      </div>
-    </div>
-    <div class="entry">
-      <h3>Off the desk</h3>
-      <p style="font-size:14.5px;color:#3f434b;">Trekked to Kedarkantha (12,500 ft) and Kalsubai (1,646 m); interviewed an IFS officer for a webinar on tiger conservation; ran a plastic-bottle-plantation workshop for kids from 500 schools; 80+ hours volunteering with NSS IIT Bombay.</p>
-    </div>
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="chips" style="margin-top:18px;">
+      <li>Product Roadmapping</li>
+      <li>Backlog Prioritization</li>
+      <li>Figma</li>
+      <li>JIRA / Agile Sprints</li>
+      <li>SQL</li>
+      <li>User Research</li>
+      <li>KPI Trees &amp; Journey Mapping</li>
+      <li>Wireframing &amp; Prototyping</li>
+    </ul>
+    <p style="margin:24px 0 0;max-width:70ch;font-size:15px;"><strong style="color:var(--ink);">Off the desk.</strong> I've trekked to Kedarkantha (12,500 ft) and Kalsubai (1,646 m), interviewed an IFS officer for a webinar on tiger conservation, run a plastic-bottle-plantation workshop for kids from 500 schools, and put in 80+ hours volunteering with NSS IIT Bombay.</p>
   </section>
 
 </main>
 
-<footer>
-  Megha Nigwal · <a href="mailto:meghanigwal.iitb@gmail.com">meghanigwal.iitb@gmail.com</a> · <a href="https://www.linkedin.com/in/megha-nigwal-3516b7194/" target="_blank" rel="noopener">LinkedIn</a>
+<footer id="contact">
+  <div class="wrap">
+    <h2>Get in touch</h2>
+    <p>I'm looking for Associate Product Manager roles. Email is the fastest way to reach me.</p>
+    <div class="actions">
+      <a class="btn solid" href="mailto:meghanigwal.iitb@gmail.com">meghanigwal.iitb@gmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/megha-nigwal-3516b7194/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/meghanigwal" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
 </footer>
 
+<script>
+  // screenshot switcher on project cards
+  document.querySelectorAll('[data-switch]').forEach(function(box){
+    var img=box.querySelector('img');
+    box.querySelectorAll('button').forEach(function(b){
+      b.addEventListener('click',function(){
+        img.src=b.dataset.src; img.alt=b.dataset.alt;
+        box.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed', x===b ? 'true':'false');});
+      });
+    });
+  });
+  // highlight the current section in the top menu
+  if('IntersectionObserver' in window){
+    var links={}; document.querySelectorAll('.bar nav a').forEach(function(a){links[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){ Object.keys(links).forEach(function(k){links[k].classList.toggle('on',k===e.target.id);}); } });},{rootMargin:'-45% 0px -50% 0px'});
+    Object.keys(links).forEach(function(id){var el=document.getElementById(id); if(el) io.observe(el);});
+  }
+</script>
 </body>
 </html>

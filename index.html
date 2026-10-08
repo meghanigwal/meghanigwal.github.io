@@ -23,6 +23,7 @@
     --c-kb:#e0544a;
     --c-upsc:#7460d6;
     --c-ath:#17694f;
+    --c-proj:#0d8ea3;
     --maxw:1080px;
     --display:'Bricolage Grotesque','Segoe UI',Helvetica,Arial,sans-serif;
     --text:'Public Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
@@ -68,27 +69,28 @@
   .btn.solid:hover{background:#0f5140;border-color:#0f5140;}
 
   /* the path: career at a glance */
-  .path{margin:48px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(4,1fr);position:relative;}
-  .path::before{content:"";position:absolute;left:0;right:0;top:9px;height:2px;background:linear-gradient(90deg,var(--c-iit),var(--c-kb),var(--c-upsc),#35c79a);opacity:.7;}
+  .path{margin:48px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(5,1fr);position:relative;}
+  .path::before{content:"";position:absolute;left:0;right:0;top:9px;height:2px;background:linear-gradient(90deg,var(--c-kb),var(--c-iit),var(--c-proj),var(--c-upsc),#35c79a);opacity:.7;}
   .path li{position:relative;}
-  .path a{display:block;color:inherit;text-decoration:none;padding:34px 20px 10px 0;border-radius:8px;}
+  .path a{display:block;color:inherit;text-decoration:none;padding:34px 16px 10px 0;border-radius:8px;}
   .path a::before{content:"";position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:var(--dot);border:3px solid var(--ink);box-shadow:0 0 0 2px var(--dot);transition:transform .15s;}
   .path a:hover::before,.path a:focus-visible::before{transform:scale(1.25);}
   .path a:hover .what{text-decoration:underline;}
   .path li.now a::before{animation:pulse 2s ease-out 3;}
   @keyframes pulse{0%{box-shadow:0 0 0 2px var(--dot),0 0 0 2px rgba(53,199,154,.6);}100%{box-shadow:0 0 0 2px var(--dot),0 0 0 16px rgba(53,199,154,0);}}
   @media (prefers-reduced-motion:reduce){ .path li.now a::before{animation:none;} .path a::before{transition:none;} }
-  .path .when{font-family:var(--display);font-weight:700;color:#fff;font-size:19px;line-height:1.2;}
+  .path .when{font-family:var(--display);font-weight:700;color:#fff;font-size:18px;line-height:1.2;}
   .path .what{font-weight:600;color:#fff;margin-top:6px;font-size:15px;line-height:1.35;}
   .path .where{font-size:14px;color:#aab6cb;line-height:1.4;margin-top:2px;}
   .path .tag{display:inline-block;margin-top:8px;font-size:12px;font-weight:600;color:var(--ink);background:#35c79a;border-radius:100px;padding:2px 10px;}
   .path .go{display:block;font-size:13px;color:#8fa0bb;margin-top:8px;}
   .path a:hover .go{color:#fff;}
-  @media (max-width:760px){
+  @media (max-width:900px){
     .path{grid-template-columns:1fr;}
-    .path::before{left:9px;right:auto;top:0;bottom:0;width:2px;height:auto;background:linear-gradient(180deg,var(--c-iit),var(--c-kb),var(--c-upsc),#35c79a);}
+    .path::before{left:9px;right:auto;top:0;bottom:0;width:2px;height:auto;background:linear-gradient(180deg,var(--c-kb),var(--c-iit),var(--c-proj),var(--c-upsc),#35c79a);}
     .path a{padding:0 0 26px 38px;}
   }
+  @media (max-width:900px){ .path li:last-child a{padding-bottom:0;} }
 
   /* sections */
   section{padding:64px 0 0;}
@@ -159,7 +161,7 @@
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:0 36px;border-top:1px solid var(--line);}
   .grid > div{padding:20px 0;border-bottom:1px solid var(--line);}
   .grid h3{font-size:17px;color:var(--ink);margin:0 0 2px;font-weight:600;}
-  .grid .ctx{color:var(--c-iit);font-weight:600;}
+  .grid .ctx{color:var(--c-proj);font-weight:600;}
   .grid .ctx{font-size:13px;color:var(--mute);margin:0 0 8px;}
   .grid p{margin:0;font-size:15px;}
   @media (max-width:700px){ .grid{grid-template-columns:1fr;} }
@@ -197,7 +199,7 @@
 
 <header class="band" id="top"><div class="hero wrap">
   <h1>Hi, I'm Megha. I like turning messy, manual work into simple products.</h1>
-  <p class="lede">I'm a product manager who studied Chemical Engineering at IIT Bombay. I'm now building a CRM and ERP for Athaya Football Academy, which coaches across 8+ housing societies. Before that, I worked on Factory OS, an app for garment manufacturers and the brands that buy from them, as a product management intern at KonnectBox.</p>
+  <p class="lede">I'm a product manager. I graduated in Chemical Engineering from IIT Bombay in 2023. I'm now building a CRM and ERP for Athaya Football Academy, which coaches across 8+ housing societies. Before that, I worked on Factory OS, an app for garment manufacturers and the brands that buy from them, as a product management intern at KonnectBox.</p>
   <div class="actions">
     <a class="btn solid" href="mailto:meghanigwal.iitb@gmail.com">Email me</a>
     <a class="btn" href="https://www.linkedin.com/in/megha-nigwal-3516b7194/" target="_blank" rel="noopener">LinkedIn</a>
@@ -205,17 +207,23 @@
   </div>
 
   <ol class="path" aria-label="Career at a glance, oldest to newest">
-    <li style="--dot:var(--c-iit)"><a href="#leadership">
-      <div class="when">IIT Bombay</div>
-      <div class="what">Chemical Engineering</div>
-      <div class="where">I led NSS Green Campus and the cultural council's web team</div>
-      <span class="go">See leadership</span>
-    </a></li>
     <li style="--dot:var(--c-kb)"><a href="#exp-konnectbox">
       <div class="when">Jun – Jul 2022</div>
       <div class="what">Product Management Intern</div>
-      <div class="where">KonnectBox. I worked on the Factory OS app</div>
+      <div class="where">KonnectBox, while at IIT Bombay. I worked on the Factory OS app</div>
       <span class="go">See this role</span>
+    </a></li>
+    <li style="--dot:var(--c-iit)"><a href="#exp-iitb">
+      <div class="when">Aug 2023</div>
+      <div class="what">Graduated from IIT Bombay</div>
+      <div class="where">Chemical Engineering</div>
+      <span class="go">See education</span>
+    </a></li>
+    <li style="--dot:var(--c-proj)"><a href="#projects">
+      <div class="when">From 2023</div>
+      <div class="what">SQL and other projects</div>
+      <div class="where">A SQL data warehouse and product case studies</div>
+      <span class="go">See projects</span>
     </a></li>
     <li style="--dot:var(--c-upsc)"><a href="#exp-upsc">
       <div class="when">2024 – 2026</div>
@@ -380,7 +388,7 @@
   </section>
 
   <section id="experience">
-    <h2>Experience</h2>
+    <h2>Experience and education</h2>
     <p class="sub">Newest first.</p>
     <div class="rows">
       <div class="row" id="exp-athaya" style="--acc:var(--c-ath)">
@@ -406,8 +414,26 @@
           </ul>
         </div>
       </div>
+      <div class="row" id="exp-projects" style="--acc:var(--c-proj)">
+        <div class="date">From 2023<span>Projects</span></div>
+        <div>
+          <h3>SQL and other projects</h3>
+          <ul>
+            <li>After graduating, I worked on a SQL data warehouse and other projects. They're listed under <a href="#projects">Other projects</a>.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row" id="exp-iitb" style="--acc:var(--c-iit)">
+        <div class="date">Aug 2023<span>Graduated</span></div>
+        <div>
+          <h3>IIT Bombay, Chemical Engineering</h3>
+          <ul>
+            <li>I graduated in August 2023. While there, I led NSS Green Campus and the cultural council's web team. See <a href="#leadership">Leadership</a>.</li>
+          </ul>
+        </div>
+      </div>
       <div class="row" id="exp-konnectbox" style="--acc:var(--c-kb)">
-        <div class="date">Jun – Jul 2022<span>Internship</span></div>
+        <div class="date">Jun – Jul 2022<span>Internship, during IIT Bombay</span></div>
         <div>
           <h3>Product Management Intern, KonnectBox</h3>
           <p class="ctx">Platform spanning 120+ countries, 3K suppliers, 10K retailers</p>
@@ -427,7 +453,7 @@
 
   <section id="projects">
     <h2>Other projects</h2>
-    <p class="sub">Things I worked on during a fellowship and at IIT Bombay.</p>
+    <p class="sub">SQL and other projects I worked on from 2023, plus a course project from IIT Bombay.</p>
     <div class="grid">
       <div>
         <h3>Netflix Analysis</h3>

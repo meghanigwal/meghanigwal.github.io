@@ -244,6 +244,15 @@
     font-size:13px;
   }
   footer a{color:var(--accent);text-decoration:none;}
+  .shots{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0 6px;}
+  @media (max-width:600px){ .shots{grid-template-columns:1fr;} }
+  .shots figure{margin:0;}
+  .shots figure.wide{grid-column:1 / -1;}
+  .shots img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f3f5fa;}
+  .shots figcaption{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;color:var(--sub);margin-top:6px;}
+  .link-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:13.5px;}
+  .link-row a{padding:8px 14px;border-radius:100px;text-decoration:none;border:1px solid var(--accent);color:var(--accent);background:var(--card);}
+  .link-row a.primary{background:var(--accent);color:#fff;}
 </style>
 </head>
 <body>
@@ -262,6 +271,7 @@
 
 <nav class="section-nav">
   <a href="#experience">Experience</a>
+  <a href="#factory-os">Factory OS</a>
   <a href="#case-study">Featured Case Study</a>
   <a href="#projects">Projects</a>
   <a href="#leadership">Leadership</a>
@@ -284,6 +294,54 @@
         <li>Ran weekly sprints in JIRA, owned the roadmap and backlog prioritization, and wrote feature documentation — contributing to a 150% rise in team efficiency.</li>
         <li>Took a field trip to Tiruppur to understand the garment manufacturing market firsthand before designing for it.</li>
       </ul>
+    </div>
+  </section>
+
+  <section id="factory-os">
+    <h2>Case Study — Factory OS</h2>
+    <div class="case-card">
+      <h3>Factory OS — app design, organised and documented</h3>
+      <div class="meta">KonnectBox · Product Management Intern · Figma · two mobile apps, one design file</div>
+
+      <div class="stat-row">
+        <div class="stat"><div class="num">2</div><div class="lab">apps: one for manufacturers, one for brands</div></div>
+        <div class="stat"><div class="num">162</div><div class="lab">screens in the file</div></div>
+        <div class="stat"><div class="num">23</div><div class="lab">numbered, explained sections</div></div>
+      </div>
+
+      <p style="font-size:14.5px;color:#3f434b;margin-top:18px;">Factory OS connects garment and footwear manufacturers with the brands that buy from them. The design covers both sides: a <strong>Partner App</strong> where a factory sets up its profile, tracks inventory and production work, and manages staff; and a <strong>Marketplace App</strong> where a brand discovers manufacturers, negotiates price, and places wholesale orders. The file is laid out so someone with no design background can follow it — every screen has a code and a one-line explanation.</p>
+
+      <div class="shots">
+        <figure class="wide"><img src="assets/factory-os/01-onboarding-section.jpg" alt="Onboarding and login section of the Partner App, with a title, a short description and nine captioned screens" loading="lazy"><figcaption>How each section reads: a title, what it covers in plain language, then screens in order with a code and caption.</figcaption></figure>
+        <figure><img src="assets/factory-os/03-inventory.jpg" alt="Partner App inventory screens" loading="lazy"><figcaption>Partner App — inventory</figcaption></figure>
+        <figure><img src="assets/factory-os/04-workflow.jpg" alt="Partner App workflow management screens" loading="lazy"><figcaption>Partner App — production workflow</figcaption></figure>
+        <figure><img src="assets/factory-os/05-discover.jpg" alt="Marketplace App discover and search screens" loading="lazy"><figcaption>Marketplace App — discover manufacturers and products</figcaption></figure>
+        <figure><img src="assets/factory-os/07-cart-negotiation.jpg" alt="Marketplace App cart screens showing price negotiation and minimum order quantity" loading="lazy"><figcaption>Marketplace App — cart with price negotiation and minimum order quantity</figcaption></figure>
+      </div>
+
+      <div class="case-grid">
+        <div class="case-block">
+          <h4>What the design covers</h4>
+          <ul class="bullets" style="padding-left:16px;">
+            <li>Partner App: onboarding, a four-step factory setup, home, inventory, workflow, staff and roles, chat, notifications</li>
+            <li>Marketplace App: sign-up, discover and search, manufacturer profile, product, cart and checkout, orders</li>
+            <li>A design-review page: screenshots of the built app with the fixes needed, and the screens redrawn in response</li>
+          </ul>
+        </div>
+        <div class="case-block">
+          <h4>How the file is organised</h4>
+          <ul class="bullets" style="padding-left:16px;">
+            <li>Pages named for their audience; sections ordered the way a user meets them</li>
+            <li>Screen codes such as P7.12 or M6.08, so a screen can be referred to without ambiguity</li>
+            <li>A “start here” guide with a glossary (OTP, MOQ, GST, empty state) and a list of open questions</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="link-row">
+        <a class="primary" href="https://www.figma.com/design/7MFIAZ83eMDVa6mihkblpO/FOS_Final_Design--Copy-?node-id=1-2773" target="_blank" rel="noopener">Open the Figma file</a>
+        <a href="https://github.com/meghanigwal/factory-os-design" target="_blank" rel="noopener">Read the write-up on GitHub</a>
+      </div>
     </div>
   </section>
 

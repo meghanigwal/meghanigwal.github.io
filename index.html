@@ -24,6 +24,7 @@
     --c-upsc:#7460d6;
     --c-ath:#17694f;
     --c-proj:#0d8ea3;
+    --c-nl:#b7791f;
     --maxw:1080px;
     --display:'Bricolage Grotesque','Segoe UI',Helvetica,Arial,sans-serif;
     --text:'Public Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
@@ -69,28 +70,28 @@
   .btn.solid:hover{background:#0f5140;border-color:#0f5140;}
 
   /* the path: career at a glance */
-  .path{margin:48px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(5,1fr);position:relative;}
-  .path::before{content:"";position:absolute;left:0;right:0;top:9px;height:2px;background:linear-gradient(90deg,var(--c-kb),var(--c-iit),var(--c-proj),var(--c-upsc),#35c79a);opacity:.7;}
+  .path{margin:48px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(6,1fr);position:relative;}
+  .path::before{content:"";position:absolute;left:0;right:0;top:9px;height:2px;background:linear-gradient(90deg,var(--c-kb),#e0a43a,var(--c-iit),var(--c-proj),var(--c-upsc),#35c79a);opacity:.7;}
   .path li{position:relative;}
-  .path a{display:block;color:inherit;text-decoration:none;padding:34px 16px 10px 0;border-radius:8px;}
+  .path a{display:block;color:inherit;text-decoration:none;padding:34px 14px 10px 0;border-radius:8px;}
   .path a::before{content:"";position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:var(--dot);border:3px solid var(--ink);box-shadow:0 0 0 2px var(--dot);transition:transform .15s;}
   .path a:hover::before,.path a:focus-visible::before{transform:scale(1.25);}
   .path a:hover .what{text-decoration:underline;}
   .path li.now a::before{animation:pulse 2s ease-out 3;}
   @keyframes pulse{0%{box-shadow:0 0 0 2px var(--dot),0 0 0 2px rgba(53,199,154,.6);}100%{box-shadow:0 0 0 2px var(--dot),0 0 0 16px rgba(53,199,154,0);}}
   @media (prefers-reduced-motion:reduce){ .path li.now a::before{animation:none;} .path a::before{transition:none;} }
-  .path .when{font-family:var(--display);font-weight:700;color:#fff;font-size:18px;line-height:1.2;}
-  .path .what{font-weight:600;color:#fff;margin-top:6px;font-size:15px;line-height:1.35;}
-  .path .where{font-size:14px;color:#aab6cb;line-height:1.4;margin-top:2px;}
+  .path .when{font-family:var(--display);font-weight:700;color:#fff;font-size:17px;line-height:1.2;}
+  .path .what{font-weight:600;color:#fff;margin-top:6px;font-size:14.5px;line-height:1.35;}
+  .path .where{font-size:13.5px;color:#aab6cb;line-height:1.4;margin-top:2px;}
   .path .tag{display:inline-block;margin-top:8px;font-size:12px;font-weight:600;color:var(--ink);background:#35c79a;border-radius:100px;padding:2px 10px;}
   .path .go{display:block;font-size:13px;color:#8fa0bb;margin-top:8px;}
   .path a:hover .go{color:#fff;}
-  @media (max-width:900px){
+  @media (max-width:1000px){
     .path{grid-template-columns:1fr;}
-    .path::before{left:9px;right:auto;top:0;bottom:0;width:2px;height:auto;background:linear-gradient(180deg,var(--c-kb),var(--c-iit),var(--c-proj),var(--c-upsc),#35c79a);}
+    .path::before{left:9px;right:auto;top:0;bottom:0;width:2px;height:auto;background:linear-gradient(180deg,var(--c-kb),#e0a43a,var(--c-iit),var(--c-proj),var(--c-upsc),#35c79a);}
     .path a{padding:0 0 26px 38px;}
   }
-  @media (max-width:900px){ .path li:last-child a{padding-bottom:0;} }
+  @media (max-width:1000px){ .path li:last-child a{padding-bottom:0;} }
 
   /* sections */
   section{padding:64px 0 0;}
@@ -158,6 +159,18 @@
   .badge{display:inline-block;font-size:13px;font-weight:600;color:#a8332b;background:#fdeceb;border-radius:6px;padding:4px 10px;margin:0 0 10px;}
   @media (max-width:700px){ .row{grid-template-columns:1fr;gap:8px;} }
 
+  .fellow{--acc:var(--c-nl);display:grid;grid-template-columns:1fr 1.15fr;gap:0;background:var(--card);border:1px solid var(--line);border-top:5px solid var(--acc);border-radius:14px;overflow:hidden;margin:0 0 32px;scroll-margin-top:72px;}
+  .fellow .cert{background:#fbf3e2;padding:24px;display:flex;flex-direction:column;justify-content:center;gap:12px;border-right:1px solid var(--line);}
+  .fellow .cert img{display:block;width:100%;height:auto;border-radius:6px;border:1px solid var(--line);}
+  .fellow .cert small{font-size:13px;color:var(--mute);}
+  .fellow .txt{padding:28px 32px;}
+  .fellow .role{font-size:14px;font-weight:600;color:var(--acc);margin:0 0 6px;}
+  .fellow h3{font-family:var(--display);font-weight:700;color:var(--ink);font-size:24px;line-height:1.15;margin:0 0 12px;}
+  .fellow p{margin:0 0 12px;font-size:15px;}
+  .fellow ol{margin:0 0 16px;padding-left:20px;font-size:15px;}
+  .fellow ol li{margin-bottom:3px;}
+  @media (max-width:820px){ .fellow{grid-template-columns:1fr;} .fellow .cert{border-right:none;border-bottom:1px solid var(--line);padding:16px;} .fellow .txt{padding:22px 20px;} }
+
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:0 36px;border-top:1px solid var(--line);}
   .grid > div{padding:20px 0;border-bottom:1px solid var(--line);}
   .grid h3{font-size:17px;color:var(--ink);margin:0 0 2px;font-weight:600;}
@@ -199,7 +212,7 @@
 
 <header class="band" id="top"><div class="hero wrap">
   <h1>Hi, I'm Megha. I like turning messy, manual work into simple products.</h1>
-  <p class="lede">I'm a product manager. I graduated in Chemical Engineering from IIT Bombay in 2023. I'm now building a CRM and ERP for Athaya Football Academy, which coaches across 8+ housing societies. Before that, I worked on Factory OS, an app for garment manufacturers and the brands that buy from them, as a product management intern at KonnectBox.</p>
+  <p class="lede">I'm a product manager. I graduated with a B.Tech in Chemical Engineering from IIT Bombay in 2023. I'm now building a CRM and ERP for Athaya Football Academy, which coaches across 8+ housing societies. Before that, I worked on Factory OS, an app for garment manufacturers and the brands that buy from them, as a product management intern at KonnectBox.</p>
   <div class="actions">
     <a class="btn solid" href="mailto:meghanigwal.iitb@gmail.com">Email me</a>
     <a class="btn" href="https://www.linkedin.com/in/megha-nigwal-3516b7194/" target="_blank" rel="noopener">LinkedIn</a>
@@ -213,16 +226,22 @@
       <div class="where">KonnectBox, while at IIT Bombay. I worked on the Factory OS app</div>
       <span class="go">See this role</span>
     </a></li>
+    <li style="--dot:#e0a43a"><a href="#fellowship">
+      <div class="when">Aug – Oct 2022</div>
+      <div class="what">Product Manager Fellowship</div>
+      <div class="where">NextLeap, Cohort 4. Certificate of completion</div>
+      <span class="go">See fellowship</span>
+    </a></li>
     <li style="--dot:var(--c-iit)"><a href="#exp-iitb">
       <div class="when">Aug 2023</div>
       <div class="what">Graduated from IIT Bombay</div>
-      <div class="where">Chemical Engineering</div>
+      <div class="where">B.Tech, Chemical Engineering, 2019 – 2023</div>
       <span class="go">See education</span>
     </a></li>
     <li style="--dot:var(--c-proj)"><a href="#projects">
       <div class="when">From 2023</div>
       <div class="what">SQL and other projects</div>
-      <div class="where">A SQL data warehouse and product case studies</div>
+      <div class="where">A SQL data warehouse and other projects</div>
       <span class="go">See projects</span>
     </a></li>
     <li style="--dot:var(--c-upsc)"><a href="#exp-upsc">
@@ -419,16 +438,25 @@
         <div>
           <h3>SQL and other projects</h3>
           <ul>
-            <li>After graduating, I worked on a SQL data warehouse and other projects. They're listed under <a href="#projects">Other projects</a>.</li>
+            <li>After graduating, I worked on a SQL data warehouse and other projects. They're listed under <a href="#projects">Fellowship and other projects</a>.</li>
           </ul>
         </div>
       </div>
       <div class="row" id="exp-iitb" style="--acc:var(--c-iit)">
-        <div class="date">Aug 2023<span>Graduated</span></div>
+        <div class="date">2019 – 2023<span>Graduated Aug 2023</span></div>
         <div>
-          <h3>IIT Bombay, Chemical Engineering</h3>
+          <h3>IIT Bombay, B.Tech in Chemical Engineering</h3>
           <ul>
             <li>I graduated in August 2023. While there, I led NSS Green Campus and the cultural council's web team. See <a href="#leadership">Leadership</a>.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row" id="exp-nextleap" style="--acc:var(--c-nl)">
+        <div class="date">Aug – Oct 2022<span>Fellowship</span></div>
+        <div>
+          <h3>Product Manager Fellowship, NextLeap</h3>
+          <ul>
+            <li>I completed the fellowship alongside my studies and received the certificate of completion. Details are under <a href="#fellowship">the fellowship</a>.</li>
           </ul>
         </div>
       </div>
@@ -452,17 +480,39 @@
   </section>
 
   <section id="projects">
-    <h2>Other projects</h2>
-    <p class="sub">SQL and other projects I worked on from 2023, plus a course project from IIT Bombay.</p>
+    <h2>Fellowship and other projects</h2>
+    <p class="sub">My product management fellowship from 2022, the SQL and other projects I worked on from 2023, and a course project from IIT Bombay.</p>
+    <article class="fellow" id="fellowship">
+      <div class="cert">
+        <img src="assets/nextleap/pm-fellowship-certificate.jpg" alt="NextLeap Certificate of Completion awarded to Megha Nigwal for the Product Manager Fellowship, Aug 1 to Oct 2, 2022" loading="lazy">
+        <small>Credential ID nlcertx19anu9ppyl9y8eo</small>
+      </div>
+      <div class="txt">
+        <p class="role">NextLeap, Cohort 4, Aug 1 – Oct 2, 2022</p>
+        <h3>Product Manager Fellowship</h3>
+        <p>A nine-week fellowship I did alongside my studies. It covered:</p>
+        <ol>
+          <li>Product discovery and user research</li>
+          <li>Problem framing, ideation and validation</li>
+          <li>Designing and building a prototype</li>
+          <li>Metrics, analytics and experimentation</li>
+          <li>Deep diving into data</li>
+          <li>Fundamentals of tech and system design</li>
+          <li>Machine learning foundations</li>
+        </ol>
+        <p>It ended with a graduation project, a slide deck on a given problem statement reviewed by three mentors, and an additional module on SQL. The Netflix and Swiggy Instamart case studies below are from this fellowship.</p>
+        <div class="links" style="--acc:var(--c-nl)"><a class="solid" href="https://assets.nextleap.app/certificate/Cohort-4-dbd2a2d5762f03b9bc36f986e0be242c.pdf" target="_blank" rel="noopener">View the certificate</a></div>
+      </div>
+    </article>
     <div class="grid">
       <div>
         <h3>Netflix Analysis</h3>
-        <p class="ctx">Nextleap Product Management Fellowship</p>
+        <p class="ctx">NextLeap Product Manager Fellowship, 2022</p>
         <p>I studied Netflix users' search and discovery behavior to map business outcomes to customer needs, using KPI trees, user personas and journey mapping to find acquisition-funnel levers for revenue growth.</p>
       </div>
       <div>
         <h3>Swiggy Instamart delivery time case study</h3>
-        <p class="ctx">Nextleap Product Management Fellowship</p>
+        <p class="ctx">NextLeap Product Manager Fellowship, 2022</p>
         <p>I built an empathy map for delivery executives to understand delivery-time bottlenecks, then devised an equation-based solution to trade off buffer time using their direct feedback.</p>
       </div>
       <div>
